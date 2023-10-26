@@ -1,0 +1,13 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <property name="uuid_type" value="BINARY(16)" dbms="mysql"/>
+    <property name="uuid_type" value="UUID" dbms="h2"/>
+
+    <property name="uuid_default" value="(UUID_TO_BIN(UUID()))" dbms="mysql"/>
+    <property name="uuid_default" value="RANDOM_UUID()" dbms="h2"/>
+
+</databaseChangeLog>
